@@ -5,11 +5,11 @@ export const content: PortfolioContent = {
         name: "Tharindu Lakshan Nanayakkara",
         headline: "Computer Engineering Undergraduate | Full-Stack • Cloud/DevOps • IoT/Embedded • Security",
         location: "Gampaha District, Sri Lanka",
-        email: "e20262@eng.pdn.ac.lk",
-        github: "https://github.com/e20262",
-        linkedin: "https://www.linkedin.com/in/tharindu-nanayakkara",
+        email: "tharindunanayakkara2001@gmail.com",
+        github: "https://github.com/TharinduNanayakkara28",
+        linkedin: "https://www.linkedin.com/in/tharindu-nanayakkara-2a96b7292/",
         phone: "+94 76 969 4990",
-        valueProp: "First-Class Computer Engineering student (cGPA 3.82) building scalable full-stack, IoT/embedded, and cloud-native systems with a security & reliability mindset.",
+        valueProp: "First-Class Computer Engineering student (GPA 3.84) building scalable full-stack, IoT/embedded, and cloud-native systems with a security & reliability mindset.",
         aboutParagraph: "I’m a First-Class Computer Engineering undergraduate focused on scalable full-stack development, embedded/IoT, and modern cloud-native architectures. I care about security, reliability, and performance—turning low-level efficiency into clean, intuitive user experiences.",
         aboutHighlights: [
             "Full-stack + system-level engineering (embedded → backend → UI)",
@@ -20,7 +20,7 @@ export const content: PortfolioContent = {
     },
     research: {
         title: "Security Testing and Threat prediction for Wi-Fi 7 MLO",
-        status: "ongoing",
+        status: "completed",
         bullets: [
             "Analyze Wi-Fi 7 MAC backoff mechanism across counter states to uncover protocol-level vulnerabilities",
             "Identify attack surfaces in Multi-Link Operation (MLO) and design mitigation strategies",
@@ -145,7 +145,7 @@ export const content: PortfolioContent = {
             institution: "University of Peradeniya",
             degree: "BSc.Eng (Hons), Computer Engineering",
             duration: "2022–Present",
-            details: "cGPA 3.82/4.00 (First Class)"
+            details: "GPA 3.84/4.00 (First Class)"
         },
         {
             institution: "Royal College, Colombo 07",
