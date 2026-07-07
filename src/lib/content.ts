@@ -109,6 +109,20 @@ export const content: PortfolioContent = {
         { title: "Tools", skills: ["Git", "GitHub", "VS Code", "IntelliJ", "Postman", "Android Studio", "Cisco Packet Tracer", "Wireshark"] },
         { title: "Concepts", skills: ["OOP", "Data Structures & Algorithms", "AI/ML", "Network Security", "Embedded Systems"] }
     ],
+    workExperience: [
+        {
+            role: "Software Engineer Intern",
+            company: "WSO2 (Pvt) Ltd.",
+            duration: "Apr 2026 – Present",
+            description: "Main Project: Streaming Support for WSO2 Integrator AI Libraries. Designed and implemented first-class, token-by-token streaming across the Ballerina AI ecosystem (ballerina/ai core, connectors, and model providers), delivering an idiomatic streaming experience comparable to the Vercel AI SDK and LlamaIndex.",
+            bullets: [
+                "Evaluated four architectural approaches and built a unified streaming abstraction, authoring Ballerina type definitions that standardize parsing of heterogeneous SSE events across 6+ LLM providers (OpenAI, Anthropic, Azure OpenAI, Mistral, DeepSeek, Ollama, OpenRouter), while extending the existing model-provider interface to preserve backward compatibility.",
+                "Built Ballerina connectors, model providers, and embedding providers from scratch (including a new Google Gemini library) and resolved multiple production issues: added Claude Opus 4.7/4.8 support (#1612), fixed parallel tool-calling in the OpenAI and Azure OpenAI connectors (#1685, #1688), and patched Anthropic multi-round parallel tool calls (#1647).",
+                "Prototyped an HR agent using RAG and MCP on the WSO2 Integrator, and authored design proposals and technical documentation."
+            ],
+            techStack: ["Ballerina", "Java", "LLM APIs (OpenAI/Anthropic/Azure/Gemini)", "Server-Sent Events (SSE)", "RAG", "MCP", "Git"]
+        }
+    ],
     experience: [
         {
             role: "Casual Instructor",
