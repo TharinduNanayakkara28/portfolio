@@ -1,0 +1,152 @@
+import { PortfolioContent } from './types';
+
+export const content: PortfolioContent = {
+    personal: {
+        name: "Tharindu Lakshan Nanayakkara",
+        headline: "Computer Engineering Undergraduate | Full-Stack • Cloud/DevOps • IoT/Embedded • Security",
+        location: "Gampaha District, Sri Lanka",
+        email: "e20262@eng.pdn.ac.lk",
+        github: "https://github.com/e20262",
+        linkedin: "https://www.linkedin.com/in/tharindu-nanayakkara",
+        phone: "+94 76 969 4990",
+        valueProp: "First-Class Computer Engineering student (cGPA 3.82) building scalable full-stack, IoT/embedded, and cloud-native systems with a security & reliability mindset.",
+        aboutParagraph: "I’m a First-Class Computer Engineering undergraduate focused on scalable full-stack development, embedded/IoT, and modern cloud-native architectures. I care about security, reliability, and performance—turning low-level efficiency into clean, intuitive user experiences.",
+        aboutHighlights: [
+            "Full-stack + system-level engineering (embedded → backend → UI)",
+            "Cloud-native development and real-time IoT communication",
+            "Security-minded: threat modeling, testing, and mitigation",
+            "Strong foundations in DSA, OOP, and network security"
+        ]
+    },
+    research: {
+        title: "Security Testing and Threat prediction for Wi-Fi 7 MLO",
+        status: "ongoing",
+        bullets: [
+            "Analyze Wi-Fi 7 MAC backoff mechanism across counter states to uncover protocol-level vulnerabilities",
+            "Identify attack surfaces in Multi-Link Operation (MLO) and design mitigation strategies",
+            "Current contribution: research gap analysis + GNN-based threat prediction implementation"
+        ],
+        techStack: ["ns-3", "C++", "Python", "Kafka", "TimescaleDB", "Grafana", "Docker", "Containerlab"],
+        repoUrl: "#" // Placeholder
+    },
+    projects: [
+        {
+            title: "LIGHTIFY – Smart Home Lighting System",
+            featured: true,
+            type: "Group Project",
+            description: "Intelligent lighting system using occupancy sensing and dynamic control",
+            bullets: [
+                "Spring Boot backend + MongoDB, deployed on AWS for real-time sync",
+                "ESP32 + MQTT over AWS IoT Core for device control and communication",
+                "My contribution: React Native app, selected backend features, MongoDB connectivity, PCB/circuit design, testing, 3D-printed enclosures"
+            ],
+            techStack: ["React Native", "Spring Boot", "AWS IoT Core", "MongoDB", "ESP32", "MQTT"],
+            repoUrl: "#", // Placeholder
+            websiteUrl: "#", // Placeholder
+            images: [
+                "/assets/Lightify_1.jpg",
+                "/assets/Lightify_2.jpg",
+                "/assets/Lightify_3.jpg"
+            ]
+        },
+        {
+            title: "CardioGuard – Cardiac Patient Monitoring System",
+            featured: true,
+            type: "Group Project",
+            description: "Patient database + ML risk assessment for heart failure/cardiac risk",
+            bullets: [
+                "Spring Boot + React, secure JWT + role-based dashboards",
+                "My contribution: frontend + backend features"
+            ],
+            techStack: ["Java", "Spring Boot", "React", "Python", "Tailwind CSS", "ML"],
+            repoUrl: "#", // Placeholder
+            websiteUrl: "#", // Placeholder
+            images: [
+                "/assets/cardio_1.jpg",
+                "/assets/cardio_2.jpg",
+                "/assets/cardio_3.jpg",
+                "/assets/cardio_4.jpg"
+            ]
+        },
+        {
+            title: "Lakshan Home Collection – E-commerce Website",
+            featured: false,
+            type: "Individual Project",
+            description: "React 18 + Redux Toolkit + Tailwind; search + filtering",
+            bullets: [
+                "Spring Boot 3.x backend + MongoDB Atlas + JWT + role-based access"
+            ],
+            techStack: ["React", "Redux Toolkit", "Spring Boot", "MongoDB Atlas", "JWT", "Tailwind", "shadcn/ui"],
+            repoUrl: "#", // Placeholder
+            images: [
+                "/assets/commerce_1.jpg",
+                "/assets/commerce_2.jpg",
+                "/assets/commerce_3.jpg",
+                "/assets/commerce_4.jpg",
+                "/assets/commerce_5.jpg",
+                "/assets/commerce_6.jpg"
+            ]
+        },
+        {
+            title: "SkinBot – CNN Skin Type Analyzer",
+            featured: false,
+            type: "Group Project",
+            description: "TensorFlow CNN for skin-type classification + desktop UI workflow integration",
+            bullets: [
+                "My contribution: integration + collaboration on model/UI pipeline"
+            ],
+            techStack: ["Python", "TensorFlow"],
+            repoUrl: "#" // Placeholder
+        }
+    ],
+    skills: [
+        { title: "Languages", skills: ["Java", "Python", "JavaScript/TypeScript", "C"] },
+        { title: "Web & Mobile", skills: ["React", "React Native", "HTML", "CSS", "Tailwind CSS"] },
+        { title: "Backend", skills: ["Spring Boot"] },
+        { title: "Databases", skills: ["MySQL", "PostgreSQL", "MongoDB"] },
+        { title: "Cloud & IoT", skills: ["AWS IoT Core", "AWS S3", "MQTT", "ESP32"] },
+        { title: "ML & Data", skills: ["TensorFlow", "NumPy", "OpenCV", "Matplotlib", "Logistic Regression", "Neural Networks"] },
+        { title: "Tools", skills: ["Git", "GitHub", "VS Code", "IntelliJ", "Postman", "Android Studio", "Cisco Packet Tracer", "Wireshark"] },
+        { title: "Concepts", skills: ["OOP", "Data Structures & Algorithms", "AI/ML", "Network Security", "Embedded Systems"] }
+    ],
+    experience: [
+        {
+            role: "Casual Instructor",
+            duration: "2024–2025",
+            description: "CO1010 – Programming for Engineers I, GP106 – Computing, CO225 – Software Construction, CO322 – Data Structures and Algorithms"
+        },
+        {
+            role: "Pre-Coders v11.0",
+            duration: "Jan 2024",
+            description: "Hackers’ Club Assistant Secretary; organized + competed"
+        },
+        {
+            role: "EngEx 2024 (75th Anniversary Exhibition)",
+            duration: "2024",
+            description: "Presented third-year undergraduate research project"
+        }
+    ],
+    education: [
+        {
+            institution: "University of Peradeniya",
+            degree: "BSc.Eng (Hons), Computer Engineering",
+            duration: "2022–Present",
+            details: "cGPA 3.82/4.00 (First Class)"
+        },
+        {
+            institution: "Royal College, Colombo 07",
+            degree: "GCE A/L",
+            duration: "2012–2020",
+            details: "3 As"
+        }
+    ],
+    certificates: [
+        { title: "Fundamentals of Java Programming", issuer: "Coursera | Board Infinity" },
+        { title: "Python Data Structures", issuer: "Coursera | University of Michigan" },
+        { title: "C for Everyone: Programming Fundamentals", issuer: "Coursera | University of California, Santa Cruz" },
+        { title: "JavaScript Basics", issuer: "Coursera | University of California, Davis" },
+        { title: "Programming for Everybody (Getting Started with Python)", issuer: "Coursera | University of Michigan" },
+        { title: "AI/ML Engineer – Stage 1 and Stage 2", issuer: "SLIIT UNI" },
+        { title: "Introduction to Cybersecurity", issuer: "CISCO Networking Academy" }
+    ]
+};
