@@ -11,17 +11,17 @@ export default function WorkExperience() {
                         key={index}
                         className="group bg-white/5 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/10 shadow-lg hover:shadow-cyan-500/20 hover:border-cyan-500/40 border-l-4 border-l-cyan-500 transition-all transform hover:-translate-y-1"
                     >
-                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-3">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-5 gap-3">
                             <div className="flex items-start gap-3">
                                 <div className="p-2.5 bg-cyan-500/20 text-cyan-400 rounded-lg shrink-0">
                                     <Building2 size={22} />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-slate-100 group-hover:text-cyan-400 transition-colors">
+                                    <h3 className="text-xl font-bold text-cyan-400 leading-snug">
                                         {exp.role}
                                     </h3>
                                     {exp.company && (
-                                        <p className="text-sm font-semibold text-cyan-400/90">{exp.company}</p>
+                                        <p className="text-sm font-semibold text-slate-300">{exp.company}</p>
                                     )}
                                 </div>
                             </div>
@@ -30,21 +30,34 @@ export default function WorkExperience() {
                             </span>
                         </div>
 
-                        <p className="text-slate-400 leading-relaxed">{exp.description}</p>
+                        <ol className="space-y-4">
+                            {exp.items.map((item, i) => (
+                                <li key={i} className="flex gap-3">
+                                    <span className="flex items-center justify-center h-6 w-6 shrink-0 rounded-full bg-cyan-500/15 text-cyan-400 text-xs font-bold">
+                                        {i + 1}
+                                    </span>
+                                    <div className="text-slate-400 leading-relaxed">
+                                        <span className="font-bold text-slate-200">{item.title} </span>
+                                        {item.description}
 
-                        {exp.bullets && exp.bullets.length > 0 && (
-                            <ul className="mt-4 space-y-3">
-                                {exp.bullets.map((bullet, i) => (
-                                    <li key={i} className="flex gap-3 text-slate-400 leading-relaxed">
-                                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500/70" />
-                                        <span>{bullet}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
+                                        {item.bullets && item.bullets.length > 0 && (
+                                            <ul className="mt-2 space-y-2">
+                                                {item.bullets.map((bullet, j) => (
+                                                    <li key={j} className="flex gap-2">
+                                                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-500/70" />
+                                                        <span>{bullet}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                </li>
+                            ))}
+                        </ol>
 
                         {exp.techStack && exp.techStack.length > 0 && (
-                            <div className="mt-6 flex flex-wrap gap-2">
+                            <div className="mt-6 flex flex-wrap items-center gap-2">
+                                <span className="text-sm font-bold text-slate-300 mr-1">Technologies:</span>
                                 {exp.techStack.map((tech, i) => (
                                     <span
                                         key={i}

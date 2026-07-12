@@ -39,10 +39,21 @@ export interface SkillCategory {
 
 export interface ExperienceData {
   role: string;
-  company?: string;
   duration: string;
   description: string;
+}
+
+export interface WorkExperienceItem {
+  title: string;
+  description: string;
   bullets?: string[];
+}
+
+export interface WorkExperienceData {
+  role: string;
+  company?: string;
+  duration: string;
+  items: WorkExperienceItem[];
   techStack?: string[];
 }
 
@@ -63,7 +74,7 @@ export interface PortfolioContent {
   research: ResearchData;
   projects: ProjectData[];
   skills: SkillCategory[];
-  workExperience: ExperienceData[];
+  workExperience: WorkExperienceData[];
   experience: ExperienceData[];
   education: EducationData[];
   certificates: CertificateData[];

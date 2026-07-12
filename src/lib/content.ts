@@ -111,16 +111,32 @@ export const content: PortfolioContent = {
     ],
     workExperience: [
         {
-            role: "Software Engineer Intern",
+            role: "Software Engineer Intern in AI Integration team",
             company: "WSO2 (Pvt) Ltd.",
-            duration: "Apr 2026 – Present",
-            description: "Main Project: Streaming Support for WSO2 Integrator AI Libraries. Designed and implemented first-class, token-by-token streaming across the Ballerina AI ecosystem (ballerina/ai core, connectors, and model providers), delivering an idiomatic streaming experience comparable to the Vercel AI SDK and LlamaIndex.",
-            bullets: [
-                "Evaluated four architectural approaches and built a unified streaming abstraction, authoring Ballerina type definitions that standardize parsing of heterogeneous SSE events across 6+ LLM providers (OpenAI, Anthropic, Azure OpenAI, Mistral, DeepSeek, Ollama, OpenRouter), while extending the existing model-provider interface to preserve backward compatibility.",
-                "Built Ballerina connectors, model providers, and embedding providers from scratch (including a new Google Gemini library) and resolved multiple production issues: added Claude Opus 4.7/4.8 support (#1612), fixed parallel tool-calling in the OpenAI and Azure OpenAI connectors (#1685, #1688), and patched Anthropic multi-round parallel tool calls (#1647).",
-                "Prototyped an HR agent using RAG and MCP on the WSO2 Integrator, and authored design proposals and technical documentation."
+            duration: "Apr. 2026 – Present",
+            items: [
+                {
+                    title: "Streaming Support for WSO2 Integrator AI Libraries.",
+                    description: "Designed, implemented, and tested first-class AI streaming support for WSO2 Integrator, enabling token-by-token response streaming across the Ballerina AI ecosystem.",
+                    bullets: [
+                        "Introduced a unified streaming abstraction alongside vendor-specific streaming implementations for 7 LLM providers, including OpenAI, Anthropic, Azure, Mistral, DeepSeek, Ollama, and OpenRouter.",
+                        "Ensured full backward compatibility with existing non-streaming APIs, delivering capabilities comparable to industry-standard frameworks such as the Vercel AI SDK and LlamaIndex."
+                    ]
+                },
+                {
+                    title: "Built Google Gemini model provider and embedding provider for the Ballerina AI ecosystem.",
+                    description: "Added Gemini chat and embedding support to the framework’s model-provider interface."
+                },
+                {
+                    title: "Built AI data loaders for the Ballerina AI ecosystem.",
+                    description: "Enabled loading of documents from Azure Blob Storage and Azure File Storage into AI pipelines for RAG and downstream processing."
+                },
+                {
+                    title: "Model Abstraction Improvements.",
+                    description: "Fixed parallel tool-calling, patched Anthropic multi-round parallel tool calls, added Claude Opus 4.7/4.8 support, and raised output-token limits across 7+ providers."
+                }
             ],
-            techStack: ["Ballerina", "Java", "LLM APIs (OpenAI/Anthropic/Azure/Gemini)", "Server-Sent Events (SSE)", "RAG", "MCP", "Git"]
+            techStack: ["Ballerina", "Java", "LLM APIs (OpenAI/Anthropic/Azure/Gemini)", "SSE", "RAG", "MCP", "Git"]
         }
     ],
     experience: [
