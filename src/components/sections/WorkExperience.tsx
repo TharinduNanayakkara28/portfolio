@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { content } from "@/lib/content";
 import Section from "../Section";
 import { Building2 } from "lucide-react";
@@ -66,6 +67,31 @@ export default function WorkExperience() {
                                         {tech}
                                     </span>
                                 ))}
+                            </div>
+                        )}
+
+                        {exp.providerLogos && exp.providerLogos.length > 0 && (
+                            <div className="mt-6 pt-5 border-t border-white/10">
+                                <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
+                                    LLM Providers Integrated
+                                </p>
+                                <div className="flex flex-wrap items-center gap-3">
+                                    {exp.providerLogos.map((logo, i) => (
+                                        <div
+                                            key={i}
+                                            title={logo.name}
+                                            className="relative h-9 w-20 flex items-center justify-center bg-white rounded-lg p-1.5 shadow-sm ring-1 ring-black/5 hover:scale-105 transition-transform"
+                                        >
+                                            <Image
+                                                src={logo.src}
+                                                alt={logo.name}
+                                                fill
+                                                sizes="80px"
+                                                className="object-contain p-1"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         )}
                     </div>

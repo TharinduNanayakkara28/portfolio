@@ -49,12 +49,18 @@ export interface WorkExperienceItem {
   bullets?: string[];
 }
 
+export interface ProviderLogo {
+  name: string;
+  src: string;
+}
+
 export interface WorkExperienceData {
   role: string;
   company?: string;
   duration: string;
   items: WorkExperienceItem[];
   techStack?: string[];
+  providerLogos?: ProviderLogo[];
 }
 
 export interface EducationData {

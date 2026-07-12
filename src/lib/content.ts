@@ -136,7 +136,15 @@ export const content: PortfolioContent = {
                     description: "Fixed parallel tool-calling, patched Anthropic multi-round parallel tool calls, added Claude Opus 4.7/4.8 support, and raised output-token limits across 7+ providers."
                 }
             ],
-            techStack: ["Ballerina", "Java", "LLM APIs (OpenAI/Anthropic/Azure/Gemini)", "SSE", "RAG", "MCP", "Git"]
+            techStack: ["Ballerina", "Java", "LLM APIs (OpenAI/Anthropic/Azure/Gemini)", "SSE", "RAG", "MCP", "Git"],
+            providerLogos: [
+                { name: "OpenAI", src: "/assets/openai.jpeg" },
+                { name: "Anthropic", src: "/assets/anthropic.jpeg" },
+                { name: "Azure OpenAI", src: "/assets/azure.png" },
+                { name: "Google Gemini", src: "/assets/gemini.webp" },
+                { name: "DeepSeek", src: "/assets/deepseek.jpeg" },
+                { name: "Ollama", src: "/assets/ollama.png" }
+            ]
         }
     ],
     experience: [
