@@ -141,7 +141,7 @@ export const content: PortfolioContent = {
                 { name: "OpenAI", src: "/assets/openai.jpeg" },
                 { name: "Anthropic", src: "/assets/anthropic.jpeg" },
                 { name: "Azure OpenAI", src: "/assets/azure.png" },
-                { name: "Google Gemini", src: "/assets/gemini.webp" },
+                { name: "Google Gemini", src: "/assets/gemini.jpeg" },
                 { name: "DeepSeek", src: "/assets/deepseek.jpeg" },
                 { name: "Ollama", src: "/assets/ollama.png" }
             ]
