@@ -75,19 +75,19 @@ export default function WorkExperience() {
                                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">
                                     LLM Providers Integrated
                                 </p>
-                                <div className="flex flex-wrap items-center gap-3">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
                                     {exp.providerLogos.map((logo, i) => (
                                         <div
                                             key={i}
                                             title={logo.name}
-                                            className="relative h-9 w-20 flex items-center justify-center bg-white rounded-lg p-1.5 shadow-sm ring-1 ring-black/5 hover:scale-105 transition-transform"
+                                            className="relative h-36 w-full flex items-center justify-center bg-white rounded-2xl p-4 shadow-md ring-1 ring-black/5 hover:scale-105 transition-transform"
                                         >
                                             <Image
                                                 src={logo.src}
                                                 alt={logo.name}
                                                 fill
-                                                sizes="80px"
-                                                className="object-contain p-1"
+                                                sizes="(max-width: 640px) 50vw, 33vw"
+                                                className="object-contain p-2"
                                             />
                                         </div>
                                     ))}
