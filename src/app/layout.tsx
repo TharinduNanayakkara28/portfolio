@@ -46,10 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} ${jost.variable} text-[#f4f5f7] antialiased relative min-h-screen overflow-x-hidden`}>
-        {/* Ambient monochrome vignette + faint accent wash */}
+        {/* Ambient monochrome vignette (neutral, no color) */}
         <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.06),_transparent_70%)]" />
-          <div className="absolute -bottom-40 -left-40 w-[620px] h-[620px] rounded-full bg-[#2f6bff]/10 blur-[140px]" />
+          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.05),_transparent_70%)]" />
         </div>
         <div className="relative z-10">
           {children}

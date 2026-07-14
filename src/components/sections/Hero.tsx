@@ -9,13 +9,6 @@ export default function Hero() {
             id="home"
             className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden"
         >
-            {/* Localized aurora so the hero glass has something to refract */}
-            <div className="aurora-field">
-                <div className="aurora aurora-blue animate-drift-a w-[420px] h-[420px] -top-24 left-[12%]" />
-                <div className="aurora aurora-violet animate-drift-b w-[360px] h-[360px] bottom-[-60px] right-[10%]" />
-                <div className="aurora aurora-cyan animate-drift-a w-[280px] h-[280px] top-[45%] left-[46%]" />
-            </div>
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                 <div className="text-center max-w-4xl mx-auto">
                     <div className="mb-10 flex justify-center animate-fade-in-up">

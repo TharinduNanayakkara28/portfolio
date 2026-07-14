@@ -6,10 +6,6 @@ import { Building2 } from "lucide-react";
 export default function WorkExperience() {
     return (
         <Section id="work-experience" title="Work Experience">
-            <div className="aurora-field">
-                <div className="aurora aurora-blue animate-drift-a w-[460px] h-[460px] top-[10%] left-[8%]" />
-                <div className="aurora aurora-violet animate-drift-b w-[360px] h-[360px] bottom-[6%] right-[8%]" />
-            </div>
             <div className="max-w-4xl mx-auto space-y-8 relative z-10">
                 {content.workExperience.map((exp, index) => (
                     <div

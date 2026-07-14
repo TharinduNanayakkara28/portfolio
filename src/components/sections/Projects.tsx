@@ -13,10 +13,6 @@ export default function Projects() {
             subtitle="A selection of my recent work in full-stack dev, IoT, and ML."
         >
             <div className="mb-16 relative">
-                <div className="aurora-field rounded-3xl">
-                    <div className="aurora aurora-blue animate-drift-a w-[420px] h-[420px] top-[-40px] left-[6%]" />
-                    <div className="aurora aurora-violet animate-drift-b w-[340px] h-[340px] bottom-[-40px] right-[8%]" />
-                </div>
                 <h3 className="eyebrow text-sm text-[#8b8d93] mb-8 flex items-center relative z-10">
                     <span className="w-8 h-px bg-white/20 mr-4"></span>
                     Featured Projects
