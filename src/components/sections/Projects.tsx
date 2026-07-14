@@ -12,13 +12,17 @@ export default function Projects() {
             title="Projects"
             subtitle="A selection of my recent work in full-stack dev, IoT, and ML."
         >
-            <div className="mb-16">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                    <span className="w-8 h-px bg-gray-300 mr-4"></span>
+            <div className="mb-16 relative">
+                <div className="aurora-field rounded-3xl">
+                    <div className="aurora aurora-blue animate-drift-a w-[420px] h-[420px] top-[-40px] left-[6%]" />
+                    <div className="aurora aurora-violet animate-drift-b w-[340px] h-[340px] bottom-[-40px] right-[8%]" />
+                </div>
+                <h3 className="eyebrow text-sm text-[#8b8d93] mb-8 flex items-center relative z-10">
+                    <span className="w-8 h-px bg-white/20 mr-4"></span>
                     Featured Projects
-                    <span className="flex-grow h-px bg-gray-200 ml-4"></span>
+                    <span className="flex-grow h-px bg-white/10 ml-4"></span>
                 </h3>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
                     {featuredProjects.map((project, index) => (
                         <ProjectCard key={index} project={project} />
                     ))}
@@ -26,10 +30,10 @@ export default function Projects() {
             </div>
 
             <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                    <span className="w-8 h-px bg-gray-300 mr-4"></span>
+                <h3 className="eyebrow text-sm text-[#8b8d93] mb-8 flex items-center">
+                    <span className="w-8 h-px bg-white/20 mr-4"></span>
                     More Projects
-                    <span className="flex-grow h-px bg-gray-200 ml-4"></span>
+                    <span className="flex-grow h-px bg-white/10 ml-4"></span>
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     {otherProjects.map((project, index) => (

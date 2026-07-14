@@ -27,7 +27,7 @@ export const content: PortfolioContent = {
             "Current contribution: research gap analysis + GNN-based threat prediction implementation"
         ],
         techStack: ["ns-3", "C++", "Python", "Kafka", "TimescaleDB", "Grafana", "Docker", "Containerlab"],
-        repoUrl: "#" // Placeholder
+        repoUrl: "https://github.com/cepdnaclk/e20-4yp-wifi-7-backoff-security-testing-and-threat-prediction"
     },
     projects: [
         {
@@ -41,8 +41,7 @@ export const content: PortfolioContent = {
                 "My contribution: React Native app, selected backend features, MongoDB connectivity, PCB/circuit design, testing, 3D-printed enclosures"
             ],
             techStack: ["React Native", "Spring Boot", "AWS IoT Core", "MongoDB", "ESP32", "MQTT"],
-            repoUrl: "#", // Placeholder
-            websiteUrl: "#", // Placeholder
+            repoUrl: "https://github.com/cepdnaclk/e20-3yp-Smart-IOT-Indoor-Lighting-System",
             images: [
                 "/assets/Lightify_1.jpg",
                 "/assets/Lightify_2.jpg",
@@ -77,7 +76,7 @@ export const content: PortfolioContent = {
                 "Spring Boot 3.x backend + MongoDB Atlas + JWT + role-based access"
             ],
             techStack: ["React", "Redux Toolkit", "Spring Boot", "MongoDB Atlas", "JWT", "Tailwind", "shadcn/ui"],
-            repoUrl: "#", // Placeholder
+            repoUrl: "https://github.com/TharinduNanayakkara28/Lakshan_Home_Collection_E_Commerce_Platform",
             images: [
                 "/assets/commerce_1.jpg",
                 "/assets/commerce_2.jpg",

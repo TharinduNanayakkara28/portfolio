@@ -1,5 +1,162 @@
 @import "tailwindcss";
 
+/* ============================================================
+   ENIGMA — monochrome / metallic dark design system
+   ============================================================ */
+:root {
+  --ground: #0a0a0c;
+  --ground-2: #0c0d10;
+  --card-a: #17181c;
+  --card-b: #0f1013;
+  --ink: #f4f5f7;
+  --muted: #8b8d93;
+  --faint: #5c5e65;
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.12);
+  --accent: #2f6bff;
+  --accent-2: #245ce0;
+  --accent-soft: rgba(47, 107, 255, 0.16);
+}
+
+/* Grid-textured near-black ground */
+body {
+  background-color: var(--ground);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: center top;
+}
+
+/* Display face (Futura-like geometric) wired via next/font variable */
+.font-display {
+  font-family: var(--font-display), "Futura", "Avenir Next", "Century Gothic", system-ui, sans-serif;
+}
+
+/* Metallic chrome text */
+.metal {
+  background: linear-gradient(177deg, #ffffff 0%, #d9dce0 34%, #a2a6ad 52%, #f0f2f4 66%, #83868d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Uppercase tracked label */
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+/* Glossy monochrome card */
+.enigma-card {
+  background: linear-gradient(158deg, var(--card-a) 0%, var(--card-b) 100%);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 30px 70px -40px rgba(0, 0, 0, 0.9);
+}
+
+/* Tech chip */
+.enigma-chip {
+  color: #cfd1d6;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  transition: border-color 0.25s, color 0.25s;
+}
+.enigma-chip:hover {
+  border-color: rgba(47, 107, 255, 0.5);
+  color: #eef2ff;
+}
+
+/* Pill badge */
+.enigma-badge {
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+}
+
+/* ---- Liquid glass (selective: nav, hero, featured cards) ---- */
+.glass {
+  position: relative;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.035));
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.38),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3),
+    0 30px 60px -28px rgba(0, 0, 0, 0.85);
+}
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, transparent 42%);
+  mix-blend-mode: screen;
+  opacity: 0.65;
+}
+
+/* Aurora glow that lives behind glass so the blur has something to refract */
+.aurora-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+}
+.aurora-blue { background: rgba(47, 107, 255, 0.42); }
+.aurora-violet { background: rgba(138, 99, 255, 0.34); }
+.aurora-cyan { background: rgba(34, 196, 255, 0.26); }
+.animate-drift-a { animation: driftA 18s ease-in-out infinite; }
+.animate-drift-b { animation: driftB 22s ease-in-out infinite; }
+
+@keyframes driftA {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(42px, 30px); }
+}
+@keyframes driftB {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-38px, -26px); }
+}
+
+/* Beveled icon tile */
+.enigma-tile {
+  background: radial-gradient(120% 120% at 50% 0%, #26272d, #101116);
+  border: 1px solid var(--line-strong);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Accent button */
+.btn-accent {
+  color: #fff;
+  background: linear-gradient(180deg, #3f78ff, #245ce0);
+  box-shadow: 0 12px 28px -12px rgba(47, 107, 255, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -12px rgba(47, 107, 255, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Ghost button */
+.btn-ghost {
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  transition: transform 0.25s, border-color 0.25s, background 0.25s;
+}
+.btn-ghost:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
 @layer utilities {
   .animate-fade-in-up {
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -7,65 +164,31 @@
     transform: translateY(20px);
   }
 
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
 
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
+  .animate-blob { animation: blob 7s infinite; }
+  .animation-delay-2000 { animation-delay: 2s; }
+  .animation-delay-4000 { animation-delay: 4s; }
 }
 
 @keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up { animation: none; opacity: 1; transform: none; }
+  .animate-blob { animation: none; }
+  .animate-drift-a, .animate-drift-b { animation: none; }
 }

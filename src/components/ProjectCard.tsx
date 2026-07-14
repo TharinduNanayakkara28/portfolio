@@ -25,37 +25,35 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     }, [project.images]);
 
     return (
-        <div className="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(8,-145,178,0.2)] transition-all duration-300 border border-white/10 hover:border-cyan-500/50 flex flex-col h-full transform hover:-translate-y-1">
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-0 pointer-events-none" />
-
+        <div className={`group relative ${project.featured ? "glass" : "enigma-card"} rounded-2xl overflow-hidden hover:border-[#2f6bff]/40 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1`}>
             <div className="relative z-10 p-6 md:p-8 flex-grow flex flex-col">
                 <div className="flex justify-between items-start mb-4">
                     <div>
-                        <h3 className="text-xl font-extrabold text-white mb-2 leading-tight group-hover:text-cyan-400 transition-colors">
+                        <h3 className="text-xl font-extrabold text-[#f4f5f7] mb-2 leading-tight group-hover:text-white transition-colors">
                             {project.title}
                         </h3>
-                        <span className="inline-block px-3 py-1 bg-cyan-950/50 border border-cyan-800/50 text-cyan-400 text-xs font-bold rounded-full mb-3 shadow-sm">
+                        <span className="enigma-badge eyebrow inline-block px-3 py-1 text-[10px] rounded-full mb-3">
                             {project.type}
                         </span>
                     </div>
-                    <div className="flex space-x-3 text-slate-400 shrink-0 ml-4">
-                        {project.repoUrl && (
+                    <div className="flex space-x-3 text-[#8b8d93] shrink-0 ml-4">
+                        {project.repoUrl && project.repoUrl !== "#" && (
                             <a
                                 href={project.repoUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 bg-white/10 rounded-full hover:bg-cyan-500/20 hover:text-cyan-400 transition-colors border border-transparent hover:border-cyan-500/30"
+                                className="enigma-tile p-2 rounded-full hover:text-[#2f6bff] transition-colors"
                                 aria-label="GitHub Repository"
                             >
                                 <Github size={20} />
                             </a>
                         )}
-                        {project.websiteUrl && (
+                        {project.websiteUrl && project.websiteUrl !== "#" && (
                             <a
                                 href={project.websiteUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 bg-white/10 rounded-full hover:bg-cyan-500/20 hover:text-cyan-400 transition-colors border border-transparent hover:border-cyan-500/30"
+                                className="enigma-tile p-2 rounded-full hover:text-[#2f6bff] transition-colors"
                                 aria-label="Live Demo"
                             >
                                 <ExternalLink size={20} />
@@ -85,7 +83,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                                         key={i}
                                         onClick={() => setCurrentImageIndex(i)}
                                         className={`h-1.5 rounded-full transition-all duration-300 ${i === currentImageIndex
-                                                ? "bg-cyan-400 w-6 opacity-100 shadow-[0_0_8px_rgba(34,211,238,0.8)]"
+                                                ? "bg-[#2f6bff] w-6 opacity-100 shadow-[0_0_8px_rgba(47,107,255,0.8)]"
                                                 : "bg-white/40 w-1.5 opacity-50 hover:bg-white/80 hover:opacity-100"
                                             }`}
                                         aria-label={`Go to image ${i + 1}`}
@@ -96,14 +94,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     </div>
                 )}
 
-                <p className="text-base text-slate-400 font-medium mb-4">
+                <p className="text-base text-[#a9abb1] font-medium mb-4">
                     {project.description}
                 </p>
 
                 <ul className="space-y-2 mb-6 flex-grow">
                     {project.bullets.map((bullet, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-slate-400">
-                            <span className="text-cyan-500 mr-2 mt-1">•</span>
+                        <li key={idx} className="flex items-start text-sm text-[#8b8d93]">
+                            <span className="text-[#2f6bff] mr-2 mt-1">•</span>
                             <span className="leading-relaxed">{bullet}</span>
                         </li>
                     ))}
@@ -113,7 +111,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     {project.techStack.map((tech) => (
                         <span
                             key={tech}
-                            className="px-3 py-1 bg-white/10 border border-white/10 text-slate-300 text-xs font-semibold rounded-lg shadow-sm group-hover:border-cyan-500/30 group-hover:text-cyan-300 transition-colors"
+                            className="enigma-chip px-3 py-1 text-xs font-medium rounded-lg"
                         >
                             {tech}
                         </span>

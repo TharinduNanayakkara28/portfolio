@@ -39,7 +39,7 @@ export default function Navbar() {
     return (
         <nav
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-                ? "bg-[#030014]/70 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-white/10"
+                ? "glass !rounded-none shadow-lg shadow-black/40"
                 : "bg-transparent py-5"
                 }`}
         >
@@ -47,9 +47,9 @@ export default function Navbar() {
                 <a
                     href="#home"
                     onClick={(e) => handleScrollToSection(e, "#home")}
-                    className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400 hover:from-indigo-400 hover:to-rose-400 transition-all"
+                    className="font-display metal text-2xl font-medium uppercase tracking-[0.3em]"
                 >
-                    TN.
+                    TN
                 </a>
 
                 {/* Desktop Menu */}
@@ -59,7 +59,7 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             onClick={(e) => handleScrollToSection(e, link.href)}
-                            className="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors"
+                            className="eyebrow text-[11px] text-[#8b8d93] hover:text-white transition-colors"
                         >
                             {link.name}
                         </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
                 <div className="md:hidden">
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="text-slate-300 hover:text-white focus:outline-none"
+                        className="text-[#8b8d93] hover:text-white focus:outline-none"
                     >
                         {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -84,7 +84,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden absolute top-full left-0 w-full bg-[#030014] shadow-xl shadow-black/50 border-t border-white/10 py-4"
+                        className="md:hidden absolute top-full left-0 w-full bg-[#0a0a0c] shadow-xl shadow-black/60 border-t border-white/10 py-4"
                     >
                         <div className="flex flex-col space-y-4 px-4">
                             {navLinks.map((link) => (
@@ -92,7 +92,7 @@ export default function Navbar() {
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => handleScrollToSection(e, link.href)}
-                                    className="text-base font-medium text-slate-300 hover:text-cyan-400 px-2 py-1 rounded-md"
+                                    className="eyebrow text-xs text-[#8b8d93] hover:text-white px-2 py-1"
                                 >
                                     {link.name}
                                 </a>

@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import Reveal from "./Reveal";
+import SplitText from "./SplitText";
 
 interface SectionProps {
     id: string;
@@ -32,19 +34,21 @@ export default function Section({
                 {(title || subtitle) && (
                     <div className="text-center mb-16">
                         {title && (
-                            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4 drop-shadow-sm">
-                                {title}
+                            <h2 className="font-display text-3xl md:text-5xl font-medium uppercase tracking-[0.14em] mb-5">
+                                <SplitText text={title} letterClassName="metal" stagger={0.04} delay={0.05} />
                             </h2>
                         )}
-                        {subtitle && (
-                            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-                                {subtitle}
-                            </p>
-                        )}
-                        {title && <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-rose-500 mx-auto mt-6 rounded-full" />}
+                        <Reveal delay={0.15}>
+                            {subtitle && (
+                                <p className="text-lg text-[#8b8d93] max-w-2xl mx-auto">
+                                    {subtitle}
+                                </p>
+                            )}
+                            {title && <div className="w-14 h-px bg-gradient-to-r from-transparent via-[#2f6bff] to-transparent mx-auto mt-7" />}
+                        </Reveal>
                     </div>
                 )}
-                {children}
+                <Reveal delay={0.08}>{children}</Reveal>
             </div>
         </section>
     );
