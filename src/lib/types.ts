@@ -6,6 +6,7 @@ export interface PersonalData {
   github: string;
   linkedin: string;
   phone: string;
+  resumeUrl: string;
   valueProp: string;
   aboutParagraph: string;
   aboutHighlights: string[];

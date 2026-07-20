@@ -1,5 +1,5 @@
 import { content } from "@/lib/content";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Handwrite from "../Handwrite";
 
@@ -42,6 +42,14 @@ export default function Hero() {
                         >
                             View Projects
                             <ArrowRight className="ml-2" size={18} />
+                        </a>
+                        <a
+                            href={content.personal.resumeUrl}
+                            download
+                            className="glass eyebrow inline-flex items-center justify-center gap-2 px-8 py-4 text-xs rounded-xl w-full sm:w-auto text-[#f4f5f7] hover:-translate-y-0.5 transition-transform"
+                        >
+                            <Download size={18} />
+                            Download Resume
                         </a>
                         <a
                             href="#contact"

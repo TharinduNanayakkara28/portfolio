@@ -9,6 +9,7 @@ export const content: PortfolioContent = {
         github: "https://github.com/TharinduNanayakkara28",
         linkedin: "https://www.linkedin.com/in/tharindu-nanayakkara-2a96b7292/",
         phone: "+94 76 969 4990",
+        resumeUrl: "/Tharindu_Nanayakkara_Resume.pdf",
         valueProp: "First-Class Computer Engineering undergraduate (GPA 3.84) with a strong foundation in AI, full-stack development, and cloud-native systems—building scalable, user-focused applications with a security- and reliability-minded approach.",
         aboutParagraph: "Enthusiastic Computer Engineer with a strong foundation in AI, full-stack web development, and cloud-native systems. Experienced in real-world projects and passionate about building scalable, user-focused applications, with a security- and reliability-minded approach and the ability to adapt quickly. Eager to grow by contributing to impactful development work, integrating AI capabilities where they add value.",
         aboutHighlights: [
