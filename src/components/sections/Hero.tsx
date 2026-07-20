@@ -1,7 +1,7 @@
 import { content } from "@/lib/content";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
-import SplitText from "../SplitText";
+import Handwrite from "../Handwrite";
 
 export default function Hero() {
     return (
@@ -28,8 +28,8 @@ export default function Hero() {
                     <p className="eyebrow inline-block mb-8 text-xs md:text-sm text-[#2f6bff] animate-fade-in-up animation-delay-100">
                         {content.personal.headline}
                     </p>
-                    <h1 className="font-display text-5xl md:text-7xl font-medium uppercase tracking-[0.06em] leading-[0.95] mb-8">
-                        <SplitText text={content.personal.name} letterClassName="metal" trigger="view" delay={0.3} />
+                    <h1 className="font-script text-6xl md:text-8xl font-normal leading-[1.25] pb-4 mb-6">
+                        <Handwrite text={content.personal.name} className="metal" />
                     </h1>
                     <p className="text-lg md:text-xl text-[#8b8d93] mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
                         {content.personal.valueProp}

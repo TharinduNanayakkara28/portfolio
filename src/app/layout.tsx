@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Jost } from "next/font/google";
+import { Inter, Jost, Great_Vibes } from "next/font/google";
 import { content } from "@/lib/content";
 import "./globals.css";
 
@@ -8,6 +8,11 @@ const jost = Jost({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-display",
+});
+const script = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-script",
 });
 
 export const metadata: Metadata = {
@@ -45,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} ${jost.variable} text-[#f4f5f7] antialiased relative min-h-screen overflow-x-hidden`}>
+      <body className={`${inter.className} ${jost.variable} ${script.variable} text-[#f4f5f7] antialiased relative min-h-screen overflow-x-hidden`}>
         {/* Ambient monochrome vignette (neutral, no color) */}
         <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] bg-[radial-gradient(ellipse_at_center,_rgba(255,255,255,0.05),_transparent_70%)]" />

@@ -33,6 +33,11 @@ body {
   font-family: var(--font-display), "Futura", "Avenir Next", "Century Gothic", system-ui, sans-serif;
 }
 
+/* Cursive "wal akuru" signature face for the name */
+.font-script {
+  font-family: var(--font-script), "Segoe Script", "Brush Script MT", cursive;
+}
+
 /* Metallic chrome text */
 .metal {
   background: linear-gradient(177deg, #ffffff 0%, #d9dce0 34%, #a2a6ad 52%, #f0f2f4 66%, #83868d 100%);
